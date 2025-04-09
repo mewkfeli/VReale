@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../css/dark_main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">VReale</div>
+        <nav>
+            <ul>
+                <li><a href="../pages/dark_index.html">Главная</a></li>
+                <li><a href="#">Доски</a></li>
+                <li><a href="#">Поиск</a></li>
+                <li><a href="#">FAQ</a></li>
+                <a class="page-mode" href="../pages/index.html"><img src="../resources/icon-light-mode.png" alt="Светлая тема"></a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="board-category">
+                <h3>Доски</h3>
+                <ul>
+                    <li><a href="../pages/dark_au.html">Автомобили и транспорт</a></li>
+                    <li><a href="">Аниме</a></li>
+                    <li><a href="">Видеоигры</a></li>
+                    <li><a href="">Музыка</a></li>
+                    <li><a href="">Настольные игры</a></li>
+                    <li><a href="">Программирование</a></li>
+                    <li><a href="">Спорт</a></li>
+                    <li><a href="">Фильмы</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="section-header">
+                <h2>Последнее добавленное</h2>
+            </div>
+        
+            <div class="thread-list">
+                <div class="thread">
+                    <div class="thread-header">
+                        
+                        <span class="thread-id">#123456</span>
+                        <span class="thread-date">01.04.2025 14:30</span>
+                    </div>
+                    <div class="thread-content">
+                        <p>Сегодня видел странный тред про котиков. Кто-нибудь ещё это видел? Как думаете, это был байт или реальная история?</p>
+                    </div>
+                    
+                    <!-- Комментарии к треду -->
+                    <div class="thread-comments">
+                        <div class="comment">
+                            <div class="comment-header">
+                                <span class="comment-id">>>#123457</span>
+                                <span class="comment-date">01.04.2025 14:35</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>Это точно байт, видел такой же месяц назад.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-header">
+                                <span class="comment-id">>>#123458</span>
+                                <span class="comment-date">01.04.2025 14:40</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>Нет, это реально, у меня сосед так кота кормит.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Кнопка перехода если комментариев > 3 -->
+                        <div class="view-thread">
+                            <a href="/b/123456" class="view-thread-button">Перейти в тред (15 ответов)</a>
+                        </div>
+                    </div>
+                    
+                    <div class="thread-footer">
+                        <span class="thread-replies">Ответов: 15</span>
+                        <span class="thread-likes">Лайков: 42</span>
+                        <span class="thread-dislikes">Дизлайков: 3</span>
+                        <a href="#" class="thread-reply">Ответить</a>
+                    </div>
+                </div>
+
+                <div class="thread">
+                    <div class="thread-header">
+                        <span class="thread-id">#123455</span>
+                        <span class="thread-date">01.04.2025 13:45</span>
+                    </div>
+                    <div class="thread-content">
+                        <p>Обсуждаем последние новости. Что думаете о текущей ситуации? Лично я считаю, что всё это уже было предсказуемо.</p>
+                    </div>
+                    <div class="thread-footer">
+                        <span class="thread-replies">Ответов: 8</span>
+                        <span class="thread-likes">Лайков: 23</span>
+                        <span class="thread-dislikes">Дизлайков: 15</span>
+                        <a href="#" class="thread-reply">Ответить</a>
+                    </div>
+                </div>
+
+                <div class="thread">
+                    <div class="thread-header">
+                        <span class="thread-id">#123454</span>
+                        <span class="thread-date">01.04.2025 12:20</span>
+                    </div>
+                    <div class="thread-content">
+                        <p>Помогите идентифицировать эту песню! Звучит примерно как "ду-ду-ду дду дду", но не могу найти.</p>
+                    </div>
+                    <div class="thread-footer">
+                        <span class="thread-replies">Ответов: 32</span>
+                        <span class="thread-likes">Лайков: 67</span>
+                        <span class="thread-dislikes">Дизлайков: 36</span>
+                        <a href="#" class="thread-reply">Ответить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more">
+                <button class="more-button">Ещё</button>
+            </div>
+            
+            <div class="thread-form">
+                <h3>Создать новый тред</h3>
+                <form>
+                    <textarea placeholder="Текст сообщения..." rows="4"></textarea>
+                    <div class="form-footer">
+                        <input type="text" placeholder="Тема (необязательно)">
+                        <button type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Командный проект VReale © 2025 | Все права не защищены</p>
+    </footer>
+</body>
+</html>

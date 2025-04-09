@@ -1,0 +1,330 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color:#212529;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+:root {
+    --blue: #00A7F8;
+}
+/* Шапка */
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #383838;
+}
+
+.logo a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.page-mode {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin-left: 1.5rem;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+nav ul li a:hover {
+    color: #383838;
+}
+/* Стили для заголовка раздела */
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #383838;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--blue);
+}
+
+/* Стили для кнопки "Ещё" */
+.load-more {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.more-button {
+    background-color: transparent;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.more-button:hover {
+    background-color: var(--blue);
+    color: white;
+}
+/* Основной контейнер */
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 220px;
+    padding-right: 2rem;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+}
+
+.board-category h3 {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.board-category ul {
+    list-style: none;
+}
+
+.board-category li {
+    margin-bottom: 0.5rem;
+}
+
+.board-category a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+.board-category a:hover {
+    color: #383838;
+}
+
+/* Контент */
+.content {
+    flex: 1;
+}
+
+.thread-list {
+    margin-bottom: 2rem;
+}
+
+.thread {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.thread:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.thread-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.thread-content {
+    margin-bottom: 1rem;
+}
+
+.thread-content p:first-child {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #383838;
+}
+
+.thread-footer {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.thread-replies, .thread-likes, .thread-dislikes {
+    margin-right: 1rem;
+}
+
+.thread-reply {
+    margin-left: auto;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.thread-reply:hover {
+    text-decoration: underline;
+}
+
+/* Форма создания треда */
+.thread-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.thread-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.thread-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+}
+
+.form-footer input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.form-footer button {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.form-footer button:hover {
+    background-color: #2c91e4;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Стили для комментариев */
+.thread-comments {
+    margin: 1rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid #e9ecef;
+}
+
+.comment {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background-color: #f0f4f8;
+    border-radius: 4px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.comment-content {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Стили для кнопки перехода в тред */
+.view-thread {
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+.view-thread-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    color: var(--blue);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.view-thread-button:hover {
+    background-color: var(--blue);
+    color: white;
+}

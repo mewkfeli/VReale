@@ -1,0 +1,383 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #111111;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Шапка */
+header {
+    background-color: #222222;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2295C7;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #2295C7;
+}
+
+.page-mode img {
+    margin-left: 1.5rem;
+    height: 24px;
+    filter: invert(1);
+}
+
+.page-mode img:hover {
+    transform: scale(1.1);
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: calc(100vh - 120px);
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 220px;
+    padding-right: 2rem;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+}
+
+.board-category h3 {
+    font-size: 1rem;
+    color: #2295C7;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #333;
+}
+
+.board-category ul {
+    list-style: none;
+}
+
+.board-category li {
+    margin-bottom: 0.5rem;
+}
+
+.board-category a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.board-category a:hover {
+    color: #2295C7;
+}
+
+/* Контент */
+.content {
+    flex: 1;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2295C7;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #2295C7;
+}
+
+.thread-list {
+    margin-bottom: 2rem;
+}
+
+.thread {
+    background-color: #222222;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #333;
+}
+
+.thread:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.thread-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #b0b0b0;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.thread-id {
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.thread-date {
+    color: #b0b0b0;
+}
+
+.thread-content {
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+.thread-footer {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #b0b0b0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.thread-replies, 
+.thread-likes, 
+.thread-dislikes {
+    display: flex;
+    align-items: center;
+}
+
+.thread-likes {
+    color: #4CAF50;
+}
+
+.thread-dislikes {
+    color: #F44336;
+}
+
+.thread-reply {
+    margin-left: auto;
+    color: #2295C7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.thread-reply:hover {
+    text-decoration: underline;
+}
+
+/* Комментарии */
+.thread-comments {
+    margin: 1rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid #333;
+}
+
+.comment {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #b0b0b0;
+    margin-bottom: 0.25rem;
+}
+
+.comment-content {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+/* Кнопка перехода в тред */
+.view-thread {
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+.view-thread-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #222222;
+    color: #2295C7;
+    border: 1px solid #2295C7;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.view-thread-button:hover {
+    background-color: #2295C7;
+    color: #111111;
+}
+
+/* Форма создания треда */
+.thread-form {
+    background-color: #222222;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    border: 1px solid #333;
+    margin-bottom: 2rem;
+}
+
+.thread-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    color: #2295C7;
+}
+
+.thread-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    resize: vertical;
+    color: #e0e0e0;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+}
+
+.form-footer input {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-right: 1rem;
+    color: #e0e0e0;
+}
+
+.form-footer button {
+    background-color: #2295C7;
+    color: #111111;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.form-footer button:hover {
+    background-color: #1e82b0;
+}
+
+/* Кнопка "Ещё" */
+.load-more {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.more-button {
+    background-color: transparent;
+    color: #2295C7;
+    border: 1px solid #2295C7;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.more-button:hover {
+    background-color: #2295C7;
+    color: #111111;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #b0b0b0;
+    font-size: 0.875rem;
+    background-color: #222222;
+    border-top: 1px solid #333;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 1rem;
+    }
+    
+    .thread-header {
+        flex-direction: column;
+    }
+    
+    .thread-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .thread-reply {
+        margin-left: 0;
+    }
+}
